@@ -1,9 +1,47 @@
+# Quartus generated folders
 db/
 incremental_db/
 output_files/
+simulation/
+
+# Quartus generated files
+*.qws
 *.rpt
 *.summary
 *.smsg
+*.qmsg
 *.qws
-*.bak
+*.jdi
+*.pin
+*.sof
+*.pof
+*.done
 *.log
+*.bak
+
+# Temp / lock files
+*.tmp
+*.swp
+*.swo
+*.lock
+*.flock
+
+# ModelSim / Questa
+transcript
+work/
+vsim.wlf
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Python (لو عندك scripts)
+__pycache__/
+*.pyc
+.venv/
+env/
+
+# VSCode / JetBrains
+.vscode/
+.idea/
+*.pdf
