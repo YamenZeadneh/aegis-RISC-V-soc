@@ -1,0 +1,15 @@
+ظظظ//              2x4Decoder
+module De2x4(
+//Enable
+input En,
+//input
+input [1:0]w,
+//output
+output [3:0]y
+);
+always @(*) begin
+	y = En ? (4'b0001 << w) : 4'b0000;
+end
+
+endmodule
+	

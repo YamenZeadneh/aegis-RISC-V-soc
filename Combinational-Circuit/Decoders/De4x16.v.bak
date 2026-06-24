@@ -1,0 +1,11 @@
+module de4x16 (W, En, Y);
+input [3:0] W;
+input En;
+output [0:15] Y;
+wire [0:3] M;
+	de2x4 Dec1 (W[3:2], M[0:3], En);
+	de2x4 Dec2 (W[1:0], Y[0:3], M[0]);
+	de2x4 Dec3 (W[1:0], Y[4:7], M[1]);
+	de2x4 Dec4 (W[1:0], Y[8:11], M[2]);
+	de2x4 Dec5 (W[1:0], Y[12:15], M[3]);
+endmodule
