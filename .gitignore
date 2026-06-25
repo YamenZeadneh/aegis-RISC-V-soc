@@ -35,7 +35,7 @@ vsim.wlf
 .DS_Store
 Thumbs.db
 
-# Python (لو عندك scripts)
+# Python 
 __pycache__/
 *.pyc
 .venv/
