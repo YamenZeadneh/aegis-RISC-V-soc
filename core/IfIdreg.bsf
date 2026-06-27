@@ -1,0 +1,79 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2025  Altera Corporation. All rights reserved.
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, the Altera Quartus Prime License Agreement,
+the Altera IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Altera and sold by Altera or its authorized distributors.  Please
+refer to the Altera Software License Subscription Agreements 
+on the Quartus Prime software download page.
+*/
+(header "symbol" (version "1.2"))
+(symbol
+	(rect 64 64 248 560)
+	(text "IfIdreg" (rect 5 0 38 10)(font "Arial" ))
+	(text "inst" (rect 8 128 25 138)(font "Arial" ))
+	(port
+		(pt 0 232)
+		(input)
+		(text "R[63..0]" (rect 0 0 40 10)(font "Arial" ))
+		(text "R[63..0]" (rect 21 227 61 237)(font "Arial" ))
+		(line (pt 0 232)(pt 16 232)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Pc[63..0]" (rect 0 0 44 10)(font "Arial" ))
+		(text "Pc[63..0]" (rect 21 43 65 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 88 496)
+		(input)
+		(text "Clock" (rect 0 0 28 10)(font "Arial" ))
+		(text "Clock" (rect 96 440 106 468)(font "Arial" )(vertical))
+		(line (pt 88 496)(pt 88 479))
+	)
+	(port
+		(pt 0 448)
+		(input)
+		(text "Resetn" (rect 0 0 35 10)(font "Arial" ))
+		(text "Resetn" (rect 21 443 56 453)(font "Arial" ))
+		(line (pt 0 448)(pt 16 448))
+	)
+	(port
+		(pt 0 464)
+		(input)
+		(text "E" (rect 0 0 7 10)(font "Arial" ))
+		(text "E" (rect 21 459 28 469)(font "Arial" ))
+		(line (pt 0 464)(pt 16 464))
+	)
+	(port
+		(pt 184 224)
+		(output)
+		(text "Q[63..0]" (rect 0 0 40 10)(font "Arial" ))
+		(text "Q[63..0]" (rect 130 219 170 229)(font "Arial" ))
+		(line (pt 184 224)(pt 168 224)(line_width 3))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "Pcout[63..0]" (rect 0 0 60 10)(font "Arial" ))
+		(text "Pcout[63..0]" (rect 113 43 173 53)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 480))
+	)
+)

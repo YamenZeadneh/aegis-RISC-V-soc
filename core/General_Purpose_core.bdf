@@ -21,7 +21,7 @@ on the Quartus Prime software download page.
 */
 (header "graphic" (version "1.4"))
 (symbol
-	(rect 288 128 456 368)
+	(rect 280 128 448 368)
 	(text "PCreg" (rect 29 24 59 34)(font "Arial" ))
 	(text "inst" (rect 32 120 49 130)(font "Arial" ))
 	(port
@@ -64,7 +64,7 @@ on the Quartus Prime software download page.
 	)
 )
 (symbol
-	(rect 496 136 696 336)
+	(rect 488 136 688 336)
 	(text "I_L1cache" (rect 5 0 55 10)(font "Arial" ))
 	(text "inst4" (rect 8 64 31 74)(font "Arial" ))
 	(port
@@ -86,9 +86,9 @@ on the Quartus Prime software download page.
 	)
 )
 (symbol
-	(rect 704 24 864 104)
+	(rect 488 24 648 104)
 	(text "add" (rect 5 0 22 10)(font "Arial" ))
-	(text "inst5" (rect 8 64 30 74)(font "DejaVu Sans Condensed" ))
+	(text "inst5" (rect 8 64 31 74)(font "Arial" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -107,7 +107,7 @@ on the Quartus Prime software download page.
 		(pt 160 32)
 		(output)
 		(text "f[63..0]" (rect 0 0 36 10)(font "Arial" ))
-		(text "f[63..0]" (rect 109 27 145 37)(font "Arial" ))
+		(text "f[63..0]" (rect 109 27 139 37)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
@@ -115,7 +115,7 @@ on the Quartus Prime software download page.
 	)
 )
 (symbol
-	(rect 552 64 632 120)
+	(rect 352 40 432 96)
 	(text "const4" (rect 0 8 33 18)(font "Arial" ))
 	(text "inst8" (rect 0 40 23 50)(font "Arial" ))
 	(port
@@ -129,39 +129,71 @@ on the Quartus Prime software download page.
 		(rectangle (rect 16 16 64 40))
 	)
 )
-(connector
-	(pt 472 168)
-	(pt 472 56)
-	(bus)
+(symbol
+	(rect 736 -64 920 432)
+	(text "IfIdreg" (rect 5 0 38 10)(font "Arial" ))
+	(text "inst1" (rect 8 128 31 138)(font "Arial" ))
+	(port
+		(pt 0 232)
+		(input)
+		(text "R[63..0]" (rect 0 0 40 10)(font "Arial" ))
+		(text "R[63..0]" (rect 21 227 61 237)(font "Arial" ))
+		(line (pt 0 232)(pt 16 232)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Pc[63..0]" (rect 0 0 44 10)(font "Arial" ))
+		(text "Pc[63..0]" (rect 21 43 65 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 88 496)
+		(input)
+		(text "Clock" (rect 0 0 28 10)(font "Arial" ))
+		(text "Clock" (rect 96 440 106 468)(font "Arial" )(vertical))
+		(line (pt 88 496)(pt 88 479))
+	)
+	(port
+		(pt 0 448)
+		(input)
+		(text "Resetn" (rect 0 0 35 10)(font "Arial" ))
+		(text "Resetn" (rect 21 443 56 453)(font "Arial" ))
+		(line (pt 0 448)(pt 16 448))
+	)
+	(port
+		(pt 0 464)
+		(input)
+		(text "E" (rect 0 0 7 10)(font "Arial" ))
+		(text "E" (rect 21 459 28 469)(font "Arial" ))
+		(line (pt 0 464)(pt 16 464))
+	)
+	(port
+		(pt 184 224)
+		(output)
+		(text "Q[63..0]" (rect 0 0 40 10)(font "Arial" ))
+		(text "Q[63..0]" (rect 130 219 170 229)(font "Arial" ))
+		(line (pt 184 224)(pt 168 224)(line_width 3))
+	)
+	(port
+		(pt 184 48)
+		(output)
+		(text "Pcout[63..0]" (rect 0 0 60 10)(font "Arial" ))
+		(text "Pcout[63..0]" (rect 113 43 173 53)(font "Arial" ))
+		(line (pt 184 48)(pt 168 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 168 480))
+	)
 )
 (connector
-	(pt 472 56)
-	(pt 704 56)
-	(bus)
-)
-(connector
-	(pt 456 168)
-	(pt 472 168)
-	(bus)
-)
-(connector
-	(pt 472 168)
-	(pt 496 168)
-	(bus)
-)
-(connector
-	(pt 704 72)
-	(pt 648 72)
-	(bus)
-)
-(connector
-	(pt 872 56)
-	(pt 872 0)
-	(bus)
-)
-(connector
-	(pt 872 0)
 	(pt 256 0)
+	(pt 680 0)
+	(bus)
+)
+(connector
+	(pt 472 120)
+	(pt 720 120)
 	(bus)
 )
 (connector
@@ -171,22 +203,63 @@ on the Quartus Prime software download page.
 )
 (connector
 	(pt 256 232)
-	(pt 288 232)
+	(pt 280 232)
 	(bus)
 )
 (connector
-	(pt 864 56)
-	(pt 872 56)
+	(pt 472 56)
+	(pt 488 56)
 	(bus)
 )
 (connector
-	(pt 648 96)
-	(pt 632 96)
+	(pt 680 0)
+	(pt 680 56)
 	(bus)
 )
 (connector
-	(pt 648 72)
-	(pt 648 96)
+	(pt 472 168)
+	(pt 488 168)
+	(bus)
+)
+(connector
+	(pt 472 56)
+	(pt 472 120)
+	(bus)
+)
+(connector
+	(pt 472 120)
+	(pt 472 168)
+	(bus)
+)
+(connector
+	(pt 448 168)
+	(pt 472 168)
+	(bus)
+)
+(connector
+	(pt 688 168)
+	(pt 736 168)
+	(bus)
+)
+(connector
+	(pt 648 56)
+	(pt 680 56)
+	(bus)
+)
+(connector
+	(pt 432 72)
+	(pt 488 72)
+	(bus)
+)
+(connector
+	(pt 720 -16)
+	(pt 720 120)
+	(bus)
+)
+(connector
+	(pt 720 -16)
+	(pt 736 -16)
 	(bus)
 )
 (junction (pt 472 168))
+(junction (pt 472 120))
