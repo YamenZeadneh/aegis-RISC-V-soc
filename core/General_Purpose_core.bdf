@@ -20,6 +20,8 @@ refer to the Altera Software License Subscription Agreements
 on the Quartus Prime software download page.
 */
 (header "graphic" (version "1.4"))
+(alias "<<__$DEF_ALIAS19>>""Q[19..15]")
+(alias "<<__$DEF_ALIAS84>>""Q[24..20]")
 (symbol
 	(rect 280 128 448 368)
 	(text "PCreg" (rect 29 24 59 34)(font "Arial" ))
@@ -107,7 +109,7 @@ on the Quartus Prime software download page.
 		(pt 160 32)
 		(output)
 		(text "f[63..0]" (rect 0 0 36 10)(font "Arial" ))
-		(text "f[63..0]" (rect 109 27 139 37)(font "Arial" ))
+		(text "f[63..0]" (rect 109 27 145 37)(font "Arial" ))
 		(line (pt 160 32)(pt 144 32)(line_width 3))
 	)
 	(drawing
@@ -130,15 +132,15 @@ on the Quartus Prime software download page.
 	)
 )
 (symbol
-	(rect 736 -64 920 432)
+	(rect 736 -64 920 424)
 	(text "IfIdreg" (rect 5 0 38 10)(font "Arial" ))
 	(text "inst1" (rect 8 128 31 138)(font "Arial" ))
 	(port
-		(pt 0 232)
+		(pt 0 240)
 		(input)
-		(text "R[63..0]" (rect 0 0 40 10)(font "Arial" ))
-		(text "R[63..0]" (rect 21 227 61 237)(font "Arial" ))
-		(line (pt 0 232)(pt 16 232)(line_width 3))
+		(text "R[31..0]" (rect 0 0 40 10)(font "Arial" ))
+		(text "R[31..0]" (rect 21 235 61 245)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
 	)
 	(port
 		(pt 0 48)
@@ -148,11 +150,11 @@ on the Quartus Prime software download page.
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
-		(pt 88 496)
+		(pt 96 488)
 		(input)
 		(text "Clock" (rect 0 0 28 10)(font "Arial" ))
-		(text "Clock" (rect 96 440 106 468)(font "Arial" )(vertical))
-		(line (pt 88 496)(pt 88 479))
+		(text "Clock" (rect 88 434 98 462)(font "Arial" )(vertical))
+		(line (pt 96 488)(pt 96 471))
 	)
 	(port
 		(pt 0 448)
@@ -169,11 +171,11 @@ on the Quartus Prime software download page.
 		(line (pt 0 464)(pt 16 464))
 	)
 	(port
-		(pt 184 224)
+		(pt 184 240)
 		(output)
-		(text "Q[63..0]" (rect 0 0 40 10)(font "Arial" ))
-		(text "Q[63..0]" (rect 130 219 170 229)(font "Arial" ))
-		(line (pt 184 224)(pt 168 224)(line_width 3))
+		(text "Q[31..0]" (rect 0 0 40 10)(font "Arial" ))
+		(text "Q[31..0]" (rect 130 235 170 245)(font "Arial" ))
+		(line (pt 184 240)(pt 168 240)(line_width 3))
 	)
 	(port
 		(pt 184 48)
@@ -183,7 +185,71 @@ on the Quartus Prime software download page.
 		(line (pt 184 48)(pt 168 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 168 480))
+		(rectangle (rect 16 8 168 480))
+	)
+)
+(symbol
+	(rect 1136 48 1488 304)
+	(text "RegistersFile" (rect 5 0 69 10)(font "Arial" ))
+	(text "inst2" (rect 8 128 31 138)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "ReadReg1[4..0]" (rect 0 0 77 10)(font "Arial" ))
+		(text "ReadReg1[4..0]" (rect 21 27 98 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "ReadReg2[4..0]" (rect 0 0 77 10)(font "Arial" ))
+		(text "ReadReg2[4..0]" (rect 21 75 98 85)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 168)
+		(input)
+		(text "WriteReg[4..0]" (rect 0 0 71 10)(font "Arial" ))
+		(text "WriteReg[4..0]" (rect 21 163 92 173)(font "Arial" ))
+		(line (pt 0 168)(pt 16 168)(line_width 3))
+	)
+	(port
+		(pt 0 224)
+		(input)
+		(text "WriteData[63..0]" (rect 0 0 81 10)(font "Arial" ))
+		(text "WriteData[63..0]" (rect 21 219 102 229)(font "Arial" ))
+		(line (pt 0 224)(pt 16 224)(line_width 3))
+	)
+	(port
+		(pt 168 0)
+		(input)
+		(text "Writeflag" (rect 0 0 44 10)(font "Arial" ))
+		(text "Writeflag" (rect 160 24 170 68)(font "Arial" )(vertical))
+		(line (pt 168 16)(pt 168 0))
+	)
+	(port
+		(pt 176 256)
+		(input)
+		(text "clock" (rect 0 0 25 10)(font "Arial" ))
+		(text "clock" (rect 168 205 178 230)(font "Arial" )(vertical))
+		(line (pt 176 256)(pt 176 240))
+	)
+	(port
+		(pt 352 72)
+		(output)
+		(text "ReadData1[63..0]" (rect 112 0 199 10)(font "Arial" ))
+		(text "ReadData1[63..0]" (rect 258 67 345 77)(font "Arial" ))
+		(line (pt 352 72)(pt 336 72)(line_width 3))
+	)
+	(port
+		(pt 352 192)
+		(output)
+		(text "ReadData2[63..0]" (rect 112 0 199 10)(font "Arial" ))
+		(text "ReadData2[63..0]" (rect 258 187 345 197)(font "Arial" ))
+		(line (pt 352 192)(pt 336 192)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 344 240))
 	)
 )
 (connector
@@ -237,11 +303,6 @@ on the Quartus Prime software download page.
 	(bus)
 )
 (connector
-	(pt 688 168)
-	(pt 736 168)
-	(bus)
-)
-(connector
 	(pt 648 56)
 	(pt 680 56)
 	(bus)
@@ -252,8 +313,23 @@ on the Quartus Prime software download page.
 	(bus)
 )
 (connector
-	(pt 720 -16)
+	(pt 688 168)
+	(pt 720 168)
+	(bus)
+)
+(connector
+	(pt 736 176)
+	(pt 720 176)
+	(bus)
+)
+(connector
+	(pt 720 176)
+	(pt 720 168)
+	(bus)
+)
+(connector
 	(pt 720 120)
+	(pt 720 -16)
 	(bus)
 )
 (connector
@@ -261,5 +337,43 @@ on the Quartus Prime software download page.
 	(pt 736 -16)
 	(bus)
 )
+(connector
+	(pt 920 176)
+	(pt 984 176)
+	(bus)
+)
+(connector
+	(pt 984 80)
+	(pt 1136 80)
+	(conduit)
+)
+(connector
+	(pt 984 128)
+	(pt 1136 128)
+	(conduit)
+)
+(connector
+	(pt 984 64)
+	(pt 984 80)
+	(bus)
+)
+(connector
+	(pt 984 80)
+	(pt 984 128)
+	(bus)
+)
+(connector
+	(pt 984 128)
+	(pt 984 176)
+	(bus)
+)
+(connector
+	(pt 984 176)
+	(pt 984 256)
+	(bus)
+)
 (junction (pt 472 168))
 (junction (pt 472 120))
+(junction (pt 984 80))
+(junction (pt 984 176))
+(junction (pt 984 128))

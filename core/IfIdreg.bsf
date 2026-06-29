@@ -21,15 +21,15 @@ on the Quartus Prime software download page.
 */
 (header "symbol" (version "1.2"))
 (symbol
-	(rect 64 64 248 560)
+	(rect 64 64 248 552)
 	(text "IfIdreg" (rect 5 0 38 10)(font "Arial" ))
 	(text "inst" (rect 8 128 25 138)(font "Arial" ))
 	(port
-		(pt 0 232)
+		(pt 0 240)
 		(input)
-		(text "R[63..0]" (rect 0 0 40 10)(font "Arial" ))
-		(text "R[63..0]" (rect 21 227 61 237)(font "Arial" ))
-		(line (pt 0 232)(pt 16 232)(line_width 3))
+		(text "R[31..0]" (rect 0 0 40 10)(font "Arial" ))
+		(text "R[31..0]" (rect 21 235 61 245)(font "Arial" ))
+		(line (pt 0 240)(pt 16 240)(line_width 3))
 	)
 	(port
 		(pt 0 48)
@@ -39,11 +39,11 @@ on the Quartus Prime software download page.
 		(line (pt 0 48)(pt 16 48)(line_width 3))
 	)
 	(port
-		(pt 88 496)
+		(pt 96 488)
 		(input)
 		(text "Clock" (rect 0 0 28 10)(font "Arial" ))
-		(text "Clock" (rect 96 440 106 468)(font "Arial" )(vertical))
-		(line (pt 88 496)(pt 88 479))
+		(text "Clock" (rect 88 434 98 462)(font "Arial" )(vertical))
+		(line (pt 96 488)(pt 96 471))
 	)
 	(port
 		(pt 0 448)
@@ -60,20 +60,20 @@ on the Quartus Prime software download page.
 		(line (pt 0 464)(pt 16 464))
 	)
 	(port
-		(pt 184 224)
+		(pt 184 240)
 		(output)
-		(text "Q[63..0]" (rect 0 0 40 10)(font "Arial" ))
-		(text "Q[63..0]" (rect 130 219 170 229)(font "Arial" ))
-		(line (pt 184 224)(pt 168 224)(line_width 3))
+		(text "Q[31..0]" (rect 0 0 40 10)(font "Arial" ))
+		(text "Q[31..0]" (rect 130 235 163 245)(font "Arial" ))
+		(line (pt 184 240)(pt 168 240)(line_width 3))
 	)
 	(port
 		(pt 184 48)
 		(output)
 		(text "Pcout[63..0]" (rect 0 0 60 10)(font "Arial" ))
-		(text "Pcout[63..0]" (rect 113 43 173 53)(font "Arial" ))
+		(text "Pcout[63..0]" (rect 113 43 163 53)(font "Arial" ))
 		(line (pt 184 48)(pt 168 48)(line_width 3))
 	)
 	(drawing
-		(rectangle (rect 16 16 168 480))
+		(rectangle (rect 16 8 168 480))
 	)
 )
