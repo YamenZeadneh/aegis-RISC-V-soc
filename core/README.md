@@ -1,2 +1,2 @@
 #not finished!
-![alt text](images/General_core_archi.png)
+![alt text](General_core_archi.png)
