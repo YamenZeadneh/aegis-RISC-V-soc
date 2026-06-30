@@ -20,8 +20,6 @@ refer to the Altera Software License Subscription Agreements
 on the Quartus Prime software download page.
 */
 (header "graphic" (version "1.4"))
-(alias "<<__$DEF_ALIAS699>>""Q[24..20]")
-(alias "<<__$DEF_ALIAS692>>""Q[19..15]")
 (symbol
 	(rect 280 128 448 368)
 	(text "PCreg" (rect 29 24 59 34)(font "Arial" ))
@@ -375,19 +373,9 @@ on the Quartus Prime software download page.
 	(bus)
 )
 (connector
-	(pt 984 64)
-	(pt 984 80)
-	(bus)
-)
-(connector
 	(pt 1056 80)
 	(pt 984 80)
 	(conduit)
-)
-(connector
-	(pt 984 80)
-	(pt 984 128)
-	(bus)
 )
 (connector
 	(pt 984 128)
@@ -398,6 +386,16 @@ on the Quartus Prime software download page.
 	(pt 1056 128)
 	(pt 984 128)
 	(conduit)
+)
+(connector
+	(pt 984 -280)
+	(pt 984 80)
+	(bus)
+)
+(connector
+	(pt 984 80)
+	(pt 984 128)
+	(bus)
 )
 (junction (pt 472 168))
 (junction (pt 472 120))
