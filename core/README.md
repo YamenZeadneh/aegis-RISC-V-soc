@@ -20,7 +20,7 @@
 | nor  rd,rs,rt  | [rd]=~([rs]or[rt])     | 1001 | 
 | nxor  rd,rs,rt | [rd]=~([rs]^[rt])      | 1010 | 
 
-- you may noticed there's no `set less than` instruction or simmeller code , this is because we work with  flags   for comparing,  check the `S-type`instruction 
+- you may noticed there's no `set less than` instruction or simmeller code , this is because we work with  flags   for comparing,  check the `C-type`instruction 
 
 ## I (work with one Register (rs) and Imm value  then store the resulte on the rt Register)
 |   | 31:29 | 28:24 | 23:19 | 18:4  | 3:0 |
