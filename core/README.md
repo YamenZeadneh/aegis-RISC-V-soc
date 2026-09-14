@@ -19,7 +19,12 @@
 | and  rd,rs,rt  | [rd]=[rs]&[rt]         | 0111 | 
 | nand  rd,rs,rt | [rd]=~([rs]&[rt])      | 1000 | 
 | nor  rd,rs,rt  | [rd]=~([rs]or[rt])     | 1001 | 
-| nxor  rd,rs,rt | [rd]=~([rs]^[rt])      | 1010 | 
+| nxor  rd,rs,rt | [rd]=~([rs]^[rt])      | 1010 |  
+| cyl  rd,rs,rt |left shift cycle rs then store on rd  | 1011 |
+| cyr  rd,rs,rt |rigt shift cycle rs then store on rd  | 1100 |
+| cylo  rd,rs,rt |left shift cycle rs with Overrflow then store on rd  | 1101 |
+| cyro  rd,rs,rt|rigt shift cycle rs with Overrflowthen store on rd  | 1110 |
+
 
 - you may noticed there's no `set less than` instruction or simmeller code , this is because we work with  flags   for comparing,  check the `C-type`instruction 
 
@@ -43,6 +48,10 @@
 | nandi rt,rs,Imm | [rt]=~([rs]&Imm) | 1000 | 
 | nori  rt,rs,Imm | [rt]=~([rs]orImm) | 1001 | 
 | nxori rt,rs,Imm | [rt]=~([rs]^Imm) | 1010 | 
+| cyli  rt , rs , Imm |left shift cycle rs then store on rt  | 1011 |
+| cyri  rt , rs , Imm |rigt shift cycle rs then store on rt  | 1100 |
+| cyloi  rt , rs , Imm |left shift cycle rs with Overrflow then store on rt  | 1101 |
+| cyroi  rt , rs , Imm|rigt shift cycle rs with Overrflowthen store on rt  | 1110 |
 
 - Imm is Singed value and will be extended to 64-bit
 ## IB (work with one or tow Register and Imm value to updata the PC value)
