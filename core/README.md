@@ -1,3 +1,4 @@
+![Alt Text](image.png)
 # ISA green card
 ## R (work with Registers only)
 |   | 31:29 | 28:24 | 23:19 | 18:14  | 13:4 |3:0|
@@ -73,7 +74,7 @@
 | instruction    | DESCRIPTION   | function code |
 |          :---: | :---:         | :---: |
 | load  rt,Imm(rs) | [rt] = Memory[[rs]+Imm..[rs]+Imm + 7] | 0000 |
-| stor  rt,Imm(rs) | Memory[[rs]+Imm..[rs]+Imm + 7] = [rt] | 0000 |
+| stor  rt,Imm(rs) | Memory[[rs]+Imm..[rs]+Imm + 7] = [rt] | 0001 |
 
 - Imm%4 should be 0 other wise the assembler will make it for example `load r5 , 19(r4)` will become `load r5 , 16(r4)`
 
@@ -88,8 +89,8 @@
 
 | instruction        | DESCRIPTION            | function code |
 |          :---:     | :---:                  | :---: |
-|  jal rs , Imm      | [rs] = PC+4 ; PC+=(Imm<<2)+4 | 0000 |
-| jalr rs , rt , Imm | [rt] = PC+4 ;PC = [rs] + (Imm<<2)+4 | 0001 |
+|  jal rt , Imm      | [rt] = PC+4 ; PC+=(Imm<<2)+4 | 0000 |
+| jalr rt , rs , Imm | [rt] = PC+4 ;PC += [rs] + (Imm<<2)+4 | 0001 |
 
 ## C (compare tow register using the ALU and store the resulte on flags )
 
