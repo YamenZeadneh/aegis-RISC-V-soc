@@ -1,15 +1,14 @@
 module Alu (
     input [63:0] Data1 ,
-          [63:0] Data2 ,
-          [5:0]  Aluop ,
-    output reg [63:0]DataOut
-           reg [1:0] PCsrc 
-);
+    input [63:0] Data2 ,
+    input [5:0]  Aluop ,
+    output reg [63:0]DataOut,
+    output reg [1:0] PCsrc );
 
 
-reg L , E , B , Overflow
-wire [64:0]plustemp,//extra bit for the Overflow
-    cycleTemp;
+reg L , E , B , Overflow;
+reg [64:0]plustemp;//extra bit for the Overflow
+reg   cycleTemp;
 always @(*) begin
     PCsrc = 2'b00;
     DataOut = 64'b0;
@@ -30,7 +29,7 @@ always @(*) begin
         DataOut = Data1 | Data2 ;
     end
     6'b000_100:begin//shl & shli
-        if(Data2 > 2'h40)begin
+        if(Data2 > 64)begin
             DataOut = 64'b0;
         end
         else begin
@@ -38,7 +37,7 @@ always @(*) begin
         end
     end
     6'b000_101:begin//shr & shri
-        if(Data2 > 2'h40)begin
+        if(Data2 > 64)begin
             DataOut = 64'b0;
         end
         else begin
@@ -46,7 +45,7 @@ always @(*) begin
         end
     end
     6'b000_110:begin//sar & sari
-        if(Data2 > 2'h40)begin
+        if(Data2 > 64)begin
             DataOut = 64'b0;
         end
         else begin
@@ -68,20 +67,21 @@ always @(*) begin
     6'b001_011:begin//nxor & nxori
         DataOut = Data1 ^ ~Data2;
     end
+
     6'b001_100:begin//cyl & cyli
-        DataOut = {Data1[Data2-1:0],Data1[63:Data2]};
+        DataOut = (Data1 << Data2) | (Data1 >> (64 - Data2));
     end
     6'b001_101:begin//cyr & cyri
-        DataOut = {Data1[Data2:0],Data1[63:63-Data2+1]};
+        DataOut = (Data1 >> Data2) | (Data1 << (64 - Data2));
     end
     6'b001_110:begin//cylo & cyloi
-        cycleTemp = Data1[Data2-1];
-        DataOut = {Data1[Data2-2:0],Overflow,Data1[63:Data2]};
+        cycleTemp = Data1[64 - Data2]; 
+        DataOut = (Data1 << Data2) | ({63'b0, Overflow} << (Data2 - 1)) | (Data1 >> (65 - Data2));
         Overflow = cycleTemp;
     end
     6'b001_111:begin//cyro & cyroi
-        cycleTemp = Data1[Data2-1];
-        DataOut = {Data1[Data2:0],Overflow,Data1[63:63-Data2+2]};
+        cycleTemp = Data1[64 - Data2]; 
+        DataOut = (Data1 >> Data2) | ({63'b0, Overflow} >> (Data2 - 1)) | (Data1 << (65 - Data2));
         Overflow = cycleTemp;
     end
     
@@ -121,6 +121,35 @@ always @(*) begin
         PCsrc = 2'b10;
     end
     //C-type
+    6'b110_001:begin//cmp
+        L = (Data1<Data2)? 1'b1 : 1'b0 ;
+        E = (Data1==Data2)? 1'b1 : 1'b0 ;
+        B = (Data1<=Data2)? 1'b1 : 1'b0 ;
+        if(((Data1[63] == 1) & (Data2[63] == 0))==1)begin
+            L = 1'b1;
+            B = 1'b1;
+        end
+    end
+    6'b110_010:begin//cmpu
+        L = (Data1<Data2)? 1'b1 : 1'b0 ;
+        E = (Data1==Data2)? 1'b1 : 1'b0 ;
+        B = (Data1<=Data2)? 1'b1 : 1'b0 ;
+    end
+    6'b111_000:begin//skl
+        if(L)begin
+            PCsrc =2'b11;
+        end
+    end
+    6'b111_001:begin//ske
+        if(E)begin
+            PCsrc =2'b11;
+        end
+    end
+    6'b111_010:begin//skb
+        if(B)begin
+            PCsrc =2'b11;
+        end
+    end
 
 
 

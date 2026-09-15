@@ -383,6 +383,49 @@ on the Quartus Prime software download page.
 		(rectangle (rect 16 16 152 96))
 	)
 )
+(symbol
+	(rect 1824 184 2032 296)
+	(text "Alu" (rect 5 0 20 10)(font "Arial" ))
+	(text "inst8" (rect 8 96 30 106)(font "DejaVu Sans Condensed" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "Data1[63..0]" (rect 0 0 61 10)(font "Arial" ))
+		(text "Data1[63..0]" (rect 21 27 82 37)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Data2[63..0]" (rect 0 0 61 10)(font "Arial" ))
+		(text "Data2[63..0]" (rect 21 43 82 53)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Aluop[5..0]" (rect 0 0 53 10)(font "Arial" ))
+		(text "Aluop[5..0]" (rect 21 59 74 69)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 208 32)
+		(output)
+		(text "DataOut[63..0]" (rect 0 0 73 10)(font "Arial" ))
+		(text "DataOut[63..0]" (rect 126 27 199 37)(font "Arial" ))
+		(line (pt 208 32)(pt 192 32)(line_width 3))
+	)
+	(port
+		(pt 208 48)
+		(output)
+		(text "PCsrc[1..0]" (rect 0 0 56 10)(font "Arial" ))
+		(text "PCsrc[1..0]" (rect 140 43 196 53)(font "Arial" ))
+		(line (pt 208 48)(pt 192 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 192 96))
+	)
+)
 (connector
 	(pt 1136 224)
 	(pt 1136 240)
@@ -510,11 +553,6 @@ on the Quartus Prime software download page.
 	(bus)
 )
 (connector
-	(pt 1448 192)
-	(pt 1736 192)
-	(bus)
-)
-(connector
 	(text "instruction[31..0]" (rect 744 140 754 220)(font "DejaVu Sans Condensed" )(vertical))
 	(pt 752 160)
 	(pt 752 192)
@@ -592,6 +630,51 @@ on the Quartus Prime software download page.
 (connector
 	(pt 968 160)
 	(pt 968 248)
+)
+(connector
+	(pt 1736 256)
+	(pt 1768 256)
+	(bus)
+)
+(connector
+	(pt 1768 256)
+	(pt 1768 232)
+	(bus)
+)
+(connector
+	(pt 1768 232)
+	(pt 1824 232)
+	(bus)
+)
+(connector
+	(pt 1768 192)
+	(pt 1448 192)
+	(bus)
+)
+(connector
+	(pt 1768 192)
+	(pt 1768 216)
+	(bus)
+)
+(connector
+	(pt 1768 216)
+	(pt 1824 216)
+	(bus)
+)
+(connector
+	(pt 1392 8)
+	(pt 1792 8)
+	(bus)
+)
+(connector
+	(pt 1792 248)
+	(pt 1792 8)
+	(bus)
+)
+(connector
+	(pt 1792 248)
+	(pt 1824 248)
+	(bus)
 )
 (junction (pt 752 304))
 (junction (pt 752 224))
