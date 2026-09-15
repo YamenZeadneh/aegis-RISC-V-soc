@@ -1,4 +1,5 @@
-![Alt Text](image.png)
+![Alt Text](core1.png)
+![Alt Text](core2.png)
 # ISA green card
 ## R (work with Registers only)
 |   | 31:29 | 28:24 | 23:19 | 18:14  | 13:4 |3:0|

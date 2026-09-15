@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CGXFC7C7F23C8
-set_global_assignment -name TOP_LEVEL_ENTITY Alu
+set_global_assignment -name TOP_LEVEL_ENTITY core
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 25.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "08:54:23  SEPTEMBER 12, 2026"
 set_global_assignment -name LAST_QUARTUS_VERSION "25.1std.0 Lite Edition"
@@ -56,6 +56,11 @@ set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_
 set_global_assignment -name EDA_GENERATE_FUNCTIONAL_NETLIST OFF -section_id eda_board_design_boundary_scan
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name VERILOG_FILE ic/mux4x1.v
+set_global_assignment -name VERILOG_FILE ic/shift2.v
+set_global_assignment -name VERILOG_FILE ic/const4.v
+set_global_assignment -name VERILOG_FILE ic/add.v
+set_global_assignment -name VERILOG_FILE ic/D_L0.v
 set_global_assignment -name VERILOG_FILE ic/Alu.v
 set_global_assignment -name VERILOG_FILE ic/Controller.v
 set_global_assignment -name VERILOG_FILE ic/ImmExtender.v
