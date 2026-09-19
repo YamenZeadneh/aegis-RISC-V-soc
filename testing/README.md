@@ -1,0 +1,2 @@
+ - for now (as I'm learning cocotb) i'm trying to make an MakeFile that's suitable for all the ic i build 
+ - to test the whole cpu i will need an assembler first  
